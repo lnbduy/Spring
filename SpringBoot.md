@@ -35,6 +35,15 @@
     - Spring Web, Spring Webmvc
     - SnakeYaml
     - Testing 
-    
+- Configuring Embedded Tomcat
+  - Servlet, filter, listener beans
+  - Property based
+  - Session based configs (cookies, timeouts..)
+  - Compression server.compression.enabled=true
+  - TLS
+    - Native TLS support via properties
+    - Most common embedded servlet change
+    - Requrie Java keystore contains the certificate
+    - 
     
   
