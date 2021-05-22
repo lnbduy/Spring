@@ -5,9 +5,9 @@
     - Operating system
     - Applications (Where spring comes to play)
     - Spring security:
-      	- Provide J2EE application security services
-      	- Designed for enterprise applications and internet-facing applications
-	- Provide authentication and authorization
+		- Provide J2EE application security services
+		- Designed for enterprise applications and internet-facing applications
+		- Provide authentication and authorization
   ## Authentication
   	- Determination of who. If a principal is who they say they are
   	- Principal can be humans or machines
@@ -17,13 +17,13 @@
 	  - OpenID, Jasig CAS (Central Authentication Service), JAAS
 	  - Kerberos and SAML
   ## Authorization
-    	- Determine what the principal can or cannot do
-	  - Authorization is based on authentication
-	  - Authorization is often call accessc control
-	  - Support: 
-	  	- Web request based
-	  	- Method invocation
-	  	- Domain object instance access control
+	- Determine what the principal can or cannot do
+  	- Authorization is based on authentication
+  	- Authorization is often call accessc control
+  	- Support: 
+		- Web request based
+		- Method invocation
+		- Domain object instance access control
   ## Spring Security project
   	- spring-security-core
   	- spring-security-config
