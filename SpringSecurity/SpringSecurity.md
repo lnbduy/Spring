@@ -25,7 +25,7 @@
 	  	- Method invocation
 	  	- Domain object instance access control
   ## Spring Security project
-    	- spring-security-core
+  	- spring-security-core
   	- spring-security-config
   	- spring-security-web
   	- spring-security-test
@@ -42,4 +42,8 @@
     - Never encrypt
     - SHA-256 is considered crackable
     - bcrypt it the best option today
+  ## LDAP
+  	- spring-security-ldap
+	- Full support for native LDAP operations
+	- Password hashing algorithm included	
   
