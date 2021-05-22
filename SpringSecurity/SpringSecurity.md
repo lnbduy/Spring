@@ -46,4 +46,37 @@
   	- spring-security-ldap
 	- Full support for native LDAP operations
 	- Password hashing algorithm included	
+  ## OAuth2
+   ### What is OAuth2
+   	- Protocol and framework for providing access to HTTP services
+	- Often used for third party access
+	- Can be used for system-to-system communications in standalone or on behalf of a user.
+	- Resource owner - often the user
+	- Client - application requesting access 
+	- Resource server: hosts protected data and accounts
+	- Authorization server: service that grant tokens
+	- Token types:
+		- Access token: the secret and often short-lived token that identifies a user.
+		- Refresh token: long-lived token used to renew access token when it expires
+		- Scopes provide for rights associated with the access token 
+	- Grants:
+		- Several grant types impact flows
+		- Authorization code grants is most common
+		- Implicit is common in web apps and mobile apps
+		- Client credentials grant is useful in system to system communications
+   ### Spring and oauth2
+   	- CommonOAuth2Provider
+	- Authorization server
+		- Provide authorization services
+		- @EnableAuthorizationServer
+		- AuthorizationServerConfigurerAdapter used to configure it
+		- Supports varius grant types
+	- Resource server
+		- Provide the resources being protected
+		- @EnableResourceServer
+	- OAuth2 client
+		- Full client support
+		- @EnableOauth2Client
+		- Oauth2RestTemplate provides much of scaffoding
+		- Support varius grant types
   
