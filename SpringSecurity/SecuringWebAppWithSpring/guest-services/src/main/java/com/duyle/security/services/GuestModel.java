@@ -1,8 +1,5 @@
 package com.duyle.security.services;
 
-/**
- * @author Frank P. Moley III.
- */
 public class GuestModel {
     private String firstName;
     private String lastName;

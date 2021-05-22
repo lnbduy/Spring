@@ -2,9 +2,6 @@ package com.duyle.security.services;
 
 import javax.persistence.*;
 
-/**
- * @author Frank P. Moley III.
- */
 @Entity
 @Table(name="GUEST")
 public class Guest {

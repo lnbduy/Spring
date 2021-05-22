@@ -12,9 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * @author Frank P. Moley III.
- */
 @RestController
 @RequestMapping("/guests")
 public class GuestServicesController {
