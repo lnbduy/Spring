@@ -5,7 +5,11 @@ import com.duyle.lil.designpatternsapp.builder.Contact;
 import com.duyle.lil.designpatternsapp.builder.ContactBuilder;
 import com.duyle.lil.designpatternsapp.factory.Pet;
 import com.duyle.lil.designpatternsapp.factory.PetFactory;
+import com.duyle.lil.designpatternsapp.repository.PresidentEntity;
+import com.duyle.lil.designpatternsapp.repository.PresidentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +47,26 @@ public class AppController {
         contacts.add(new Contact("John", "Adams", null));
         contacts.add(new ContactBuilder().firstName("Thomas").lastName("Jefferson").buildContact());
         return contacts;
+    }
+
+    @Autowired
+    PresidentRepository presidentRepository;
+
+    @GetMapping("presidents/{id}")
+    public PresidentEntity getPresById(@PathVariable Long id) {
+        return this.presidentRepository.findById(id).get();
+    }
+
+    @Autowired
+    RestTemplate restTemplate;
+
+    @GetMapping("presidentContact/{id}")
+    public Contact getPresContactById(@PathVariable Long id) {
+        PresidentEntity entity = this.restTemplate.getForEntity("http://localhost:8080/presidents/{id}", PresidentEntity.class, id).getBody();
+        return new ContactBuilder().firstName(entity.getFirstName())
+                .lastName(entity.getLastName())
+                .emailAddress(entity.getEmailAddress())
+                .buildContact();
     }
 
 }

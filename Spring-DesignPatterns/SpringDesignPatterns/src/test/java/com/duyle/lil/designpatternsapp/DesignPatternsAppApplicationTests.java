@@ -1,6 +1,7 @@
 package com.duyle.lil.designpatternsapp;
 import com.duyle.lil.designpatternsapp.prototype.ProtoFalse;
 import com.duyle.lil.designpatternsapp.prototype.ProtoTrue;
+import com.duyle.lil.designpatternsapp.repository.PresidentRepository;
 import com.duyle.lil.designpatternsapp.singleton.SingA;
 import com.duyle.lil.designpatternsapp.singleton.SingB;
 import org.junit.jupiter.api.Test;
@@ -26,6 +27,14 @@ public class DesignPatternsAppApplicationTests {
     @Autowired
     ProtoFalse protoFalse2;
 
+    @Autowired
+    PresidentRepository presidentRepository;
+
+    @Test
+    public void testRepository() {
+        System.out.println(presidentRepository.findById(1L));
+        System.out.println(presidentRepository.findById(2L));
+    }
     @Test
     public void testSingletons() {
         SingA singA1 = SingA.getInstance();
