@@ -1,4 +1,4 @@
-# Spring boot
+# Spring Boot basic
  ## Auto configuration
  - @EnableAutoConfiguration - included in @SpringbootApplication
    - Allow for configuration classes to be scanned dynamically
@@ -52,6 +52,13 @@
 - TLS
   - Native TLS support via properties
   - Most common embedded servlet change
-  - Requrie Java keystore contains the certificate    
-    
+  - Requrie Java keystore contains the certificate
   
+# Spring Boot web
+# Spring Boot Command Line
+  - Simple and effective
+    - We don't always need web
+    - We just need to do some work
+    - Think of admin tasks and batch operations    
+# Spring Boot Data
+# Spring Boot extra topics
