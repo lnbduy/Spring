@@ -65,3 +65,4 @@
 - Spring security
 - Spring messaging
 - Spring actuator
+- Spring REST repositories
