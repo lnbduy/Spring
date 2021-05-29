@@ -62,3 +62,6 @@
     - Think of admin tasks and batch operations    
 # Spring Boot Data
 # Spring Boot extra topics
+- Spring security
+- Spring messaging
+- Spring actuator
